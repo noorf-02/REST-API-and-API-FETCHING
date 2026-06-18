@@ -13,6 +13,11 @@ const createProduct = async (req,res) =>{
     res.send(createdProduct);
 }
 
-module.exports = { createProduct }
+const getProduct = async (req,res)=>{
+    const data = await product.find({});
+    res.send(data);
+}
+
+module.exports = { createProduct, getProduct };
 
 // this function is sent to the routes so the function can be applied to the register route
