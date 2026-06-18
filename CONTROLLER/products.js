@@ -1,0 +1,18 @@
+// in controller we add the functions to create those products
+
+// we first destructure the variables from our schema first and then text it into postman and mongodb
+// we also have to tell the main server that the data is in json formar
+// the image can not be in the json format 
+
+const product = require('../MODELS/products');
+
+const createProduct = async (req,res) =>{
+    const {ProductName, ProductDescription, Price, Image} = req.body;
+    // this means that the schema has been destructured
+    const createdProduct = await product.create({ProductName:ProductName, ProductDescription:ProductDescription, Price:Price, Image:Image});
+    res.send(createdProduct);
+}
+
+module.exports = { createProduct }
+
+// this function is sent to the routes so the function can be applied to the register route
