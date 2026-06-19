@@ -13,6 +13,8 @@ const createProduct = async (req,res) =>{
     res.send(createdProduct);
 }
 
+// this is to get the products in the API format that can be fetched in the front end later on
+
 const getProduct = async (req,res)=>{
     const data = await product.find({});
     res.send(data);

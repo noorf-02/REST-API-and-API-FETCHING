@@ -5,6 +5,8 @@ dotenv.config();
 const port = process.env.PORT;
 const connectDB = require('./CONNECTDATABASE/dbconnect');
 const Router = require('./ROUTES/products');
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());
 connectDB();
