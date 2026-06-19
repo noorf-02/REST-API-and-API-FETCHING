@@ -9,7 +9,7 @@ const product = require('../MODELS/products');
 const createProduct = async (req,res) =>{
     const {ProductName, ProductDescription, Price, Image} = req.body;
     // this means that the schema has been destructured
-    const createdProduct = await product.create({ProductName:ProductName, ProductDescription:ProductDescription, Price:Price, Image:Image});
+    const createdProduct = await product.create({ProductName:ProductName, ProductDescription:ProductDescription, Price:Price, Image:Image, Category:Category});
     res.send(createdProduct);
 }
 

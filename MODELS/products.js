@@ -15,6 +15,9 @@ const productSchema = new Schema ({
     Image:{
         type:String,
     },
+    Category:{
+        type:String
+    }
 })
 
 //after creating the schema we convert it into a model 
